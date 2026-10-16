@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Click Photo Booth | Lagos events</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <section class="hero" id="top">
+      <svg class="hero-filters" aria-hidden="true" focusable="false">
+        <filter id="blob-wobble" x="-10%" y="-20%" width="120%" height="140%">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
+          <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -10" result="goo"/>
+          <feTurbulence type="fractalNoise" baseFrequency="0.0035 0.006" numOctaves="1" seed="11" result="noise"/>
+          <feDisplacementMap in="goo" in2="noise" scale="55" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+      </svg>
+      <div class="hero-word" aria-hidden="true">Click</div>
+      <div class="hero-copy"><h1>Let's make it official</h1></div>
+      <div class="hero-bottom"><a class="hero-scroll hero-scroll-outline" href="#experiences">EXPLORE OUR EXPERIENCES</a><a class="hero-scroll" href="#official">FILL IN YOUR DETAILS</a></div>
+    </section>
+
+    <section class="booking" id="official">
+      <div class="booking-intro">
+        <h2>Tell us about<br><em>your event.</em></h2>
+        <p>We're so excited to be part of your event! Share a few details so we can get everything ready.</p>
+      </div>
+      <div class="form-panel">
+        <form id="booking-form">
+          <div class="form-heading"><h3>YOUR EVENT DETAILS</h3><span>ABOUT 1 MINUTE</span></div>
+          <div class="field-row">
+            <label>FULL NAME <b>*</b><input name="name" autocomplete="name" required maxlength="120" placeholder="Your name"></label>
+            <label>WHATSAPP NUMBER <b>*</b><input name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" required maxlength="40" placeholder="+234 ..."></label>
+          </div>
+          <div class="field-row">
+            <label>EVENT TYPE <b>*</b>
+              <select name="eventType" required>
+                <option value="" disabled selected>Choose an event</option>
+                <option>Wedding</option><option>Birthday</option><option>Party</option><option>Bridal shower</option><option>Corporate event</option><option>Brand activation</option><option>Other</option>
+              </select>
+            </label>
+            <label>PACKAGE <b>*</b>
+              <select name="package" required>
+                <option value="" disabled selected>Choose a package</option>
+                <option>Starter</option><option>Premium</option><option>Elite</option><option>Brand Builder</option><option>Not sure yet</option>
+              </select>
+            </label>
+          </div>
+          <label>EVENT DATE OR POSSIBLE DATES<input name="eventDates" maxlength="160" placeholder="e.g. 12 June or 19 June"></label>
+          <div class="field-row">
+            <label>LOCATION<input name="location" maxlength="160" placeholder="Venue or area"></label>
+            <label>SETUP TIME<input name="setupTime" maxlength="120" placeholder="e.g. Around 4pm, TBC"></label>
+          </div>
+          <label class="honeypot" aria-hidden="true">Leave this empty<input name="website" tabindex="-1" autocomplete="off"></label>
+          <button class="submit" type="submit">SEND MY DETAILS</button>
+          <p class="form-error" role="alert" hidden></p>
+          <p class="form-note">We'll use this to prepare your invoice. Your booking is confirmed after invoice and payment.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="experiences" id="experiences">
+      <div class="experience-head">
+        <h2>Our <em>packages.</em></h2>
+        <p>From house parties to brand activations, there's a Click for the moment. Ask us for the best fit.</p>
+      </div>
+      <div class="package-grid">
+        <article class="package starter">
+          <h3>Starter</h3>
+          <strong>The essentials, done beautifully.</strong>
+          <ul class="package-features"><li>4 hours</li><li>Unlimited digital photos</li><li>50 prints</li><li>Custom frame</li><li>Digital album</li></ul>
+        </article>
+        <article class="package premium">
+          <h3>Premium</h3>
+          <strong>Most popular choice.</strong>
+          <ul class="package-features"><li>5 hours</li><li>Unlimited digital photos</li><li>100 prints</li><li>Custom frame</li><li>Event props</li><li>Instant sharing</li></ul>
+        </article>
+        <article class="package elite">
+          <h3>Elite</h3>
+          <strong>The complete experience.</strong>
+          <ul class="package-features"><li>5 hours</li><li>Unlimited prints</li><li>Custom frame</li><li>Event props</li><li>Instant sharing</li><li>Boomerangs</li><li>Guest book</li></ul>
+        </article>
+        <article class="package brand-builder">
+          <h3>Brand Builder</h3>
+          <strong>Corporate events and product launches.</strong>
+          <ul class="package-features"><li>Custom branding</li><li>Lead generation</li><li>Attendants</li><li>Instant sharing</li><li>Post-event analytics</li></ul>
+        </article>
+      </div>
+      <p class="addons">MAKE IT YOURS: EXTRA HOURS · ADDITIONAL PRINTS · CUSTOM PROPS · MINI GUEST ALBUMS · LATE NIGHT SERVICE</p>
+    </section>
+
+    <footer class="site-footer">
+      <svg class="hero-filters" aria-hidden="true" focusable="false">
+        <filter id="footer-wobble" x="-5%" y="-10%" width="110%" height="120%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.01 0.016" numOctaves="1" seed="11" result="noise"/>
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="12" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+      </svg>
+      <a class="footer-brand" href="#top" aria-label="Click Photo Booth, back to top"><span class="footer-word">Click</span><span class="footer-sub">PHOTO BOOTH</span></a>
+      <p class="footer-slogan">Make your event unforgettable</p>
+      <nav class="footer-links" aria-label="Contact">
+        <a href="https://wa.me/447471077589?text=Hi%20Click!%20I%27d%20love%20to%20ask%20about%20your%20photo%20booth." target="_blank" rel="noopener noreferrer">WHATSAPP</a>
+        <span class="footer-divider" aria-hidden="true"></span>
+        <a href="https://www.instagram.com/clickk.ng/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+      </nav>
+      <div class="footer-base"><span>© 2026 CLICK PHOTO BOOTH</span><span>LAGOS, NIGERIA</span></div>
+    </footer>
+  </main>
+  <script src="form.js"></script>
+</body>
+</html>
