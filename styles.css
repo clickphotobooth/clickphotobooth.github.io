@@ -91,6 +91,8 @@
 .booking { background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), #141414 url('assets/booking-bg.webp') center / cover no-repeat; color: #f3ede4; }
 .form-panel { background: #fffdfa; color: #211b17; border: 2px solid #211b17; box-shadow: none; }
 .form-heading { border-color: #211b17; }
+/* Match the rest of the page: DM Sans everywhere in the form. */
+.form-heading h3, .success h3 { font-family: 'DM Sans', Arial, sans-serif; font-weight: 700; letter-spacing: -.04em; }
 .form-panel input, .form-panel select { border: 1.5px solid #aa9c92; background: #fffdfa; color: #211b17; }
 .form-panel input::placeholder { color: #847970; }
 .form-panel label b { color: #9a0100; }
